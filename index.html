@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--- Css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Icones -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <!--Fontes  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap" rel="stylesheet">
+<!-- JS -->
+  <script src="script/script.js" defer></script>
+</head>
+
+<body>
+  <div class="todo-container">
+    <header>
+      <h1> To-Do List</h1>
+    </header>
+
+    <!-- Adição de tarefas na lista-->
+
+    <form id="todo-form">
+    <p> Adicione sua tarefa</p>
+    <div class="form-control">
+      <input type="text" id="todo-input" placeholder="O que você vai fazer?">
+      <button type="submit"> 
+        <i class="bi bi-plus-square"></i>
+      </button>
+    </div>
+  </form>
+<!-- Para editar suas tarefas da lista -->
+
+    <form id="edit-form" class="hide">
+        <p>Edite sua tarefa</p>
+        <div class="form-control" >
+        <input type="text" id="edit-text">
+        <button type="submit">
+          <i class="bi bi-check2-square"></i>
+        </button>
+      </div>
+      <button id="cancel-edit-btn">Cancelar</button>
+    </form>
+<!-- Pesquisar as tarefas -->
+<div id="toolbar">
+  <div id="search">
+    <h4>
+      Pesquisar:
+    </h4>
+    <form>
+<input type="text" id="search-input" placeholder="Buscar">
+<button id="erase-button">
+  <i class="bi bi-x-square"></i>
+</button>
+    </form>
+  </div>
+  <!-- Filtrar as tarefas -->
+  <div id="filter">
+    <h4> Filtrar: </h4>
+    <select name="" id="filter-select">
+      <option value="all">Todos </option>
+      <option value="done">Completas</option>
+      <option value="todo">A fazer</option>
+    </select>
+  </div>
+</div>
+<div id="todo-list">
+  <div class="todo"> 
+    <h3> Comer banana</h3>
+    <button class="finish-todo">
+      <i class="bi bi-check2-square"></i>
+    </button>
+    <button class="edit-todo">
+      <i class="bi bi-pen"></i>
+    </button>
+    <button class="remove-todo">
+      <i class="bi bi-x-square"></i>
+    </button>
+
+  </div>
+  <div class="todo"> 
+    <h3> Estudar React </h3>
+    <button class="finish-todo">
+      <i class="bi bi-x-square"></i>
+    </button>
+    <button class="edit-todo">
+      <i class="bi bi-pen"></i>
+    </button>
+    <button class="remove-todo">
+      <i class="bi bi-x-square"></i>
+    </button>
+
+  </div>
+</div>
+  </div>
+</body>
+</html>
